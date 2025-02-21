@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { useAuth } from "../Context/AuthContext";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import { Button } from "../Components/ui/button"; 
 
 export default function Login() {
@@ -21,9 +22,15 @@ export default function Login() {
         <h2 className="text-2xl font-bold mb-4">Login</h2>
         <Button
           onClick={login}
-          className="w-full flex items-center justify-center gap-2 bg-grey-500 hover:bg-grey-700 text-black font-semibold py-2 px-4 rounded-lg"
+          className="w-full flex items-center justify-center gap-2 bg-white-500 hover:bg-white-700 text-black font-semibold py-2 px-4 rounded-lg"
         >
-          <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-7/512/google_logo-google_icongoogle-1024.png" alt="Google Logo" className="w-5 h-5" />
+          <Image 
+            src="/google-logo.png"  
+            alt="Google Logo" 
+            width={24} 
+            height={24} 
+            priority
+          />
           Sign in with Google
         </Button>
       </div>
