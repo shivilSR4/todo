@@ -164,7 +164,7 @@ export default function Dashboard() {
                   task.status === "Ongoing"
                     ? "bg-yellow-200"
                     : task.status === "Completed"
-                    ? "bg-green-200"
+                    ? "bg-green-200 line-through"
                     : "bg-gray-200";
 
                 return (

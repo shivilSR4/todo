@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { AuthProvider } from "../Context/AuthContext"; 
 import "./globals.css";
 
-
-
 export const metadata: Metadata = {
   title: "My ToDo App",
   description: "Firebase Google Auth with Next.js",
@@ -17,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <AuthProvider> {/* Wrap with AuthProvider */}
+        <AuthProvider> 
           {children}
         </AuthProvider>
       </body>
